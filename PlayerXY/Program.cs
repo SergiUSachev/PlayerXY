@@ -4,29 +4,22 @@
 	{
 		static void Main(string[] args)
 		{
-			Player playerOne = new Player(102, 50);
+			Player playerOne = new Player(100, 250);
 			Renderer renderer = new Renderer();
 
-			renderer.DrawPlayer(playerOne.X, playerOne.Y, '$');
-
-
-
-
-
+			renderer.DrawPlayer(playerOne.Xposition, playerOne.Yposition, '$');
 		}
 	}
+
 	public class Player
 	{
-		private int _x;
-		private int _y;
+		public int Xposition { get; private set; }
+		public int Yposition { get; private set; }
 
-		public int X { get { return _x; } private set { _x = value; } }
-		public int Y { get { return _y; } private set { _y = value; } }
-
-		public Player(int x, int y)
+		public Player(int xPosition, int yPosition)
 		{
-			X = x;
-			Y = y;
+			Xposition = xPosition;
+			Yposition = yPosition;
 		}
 	}
 
